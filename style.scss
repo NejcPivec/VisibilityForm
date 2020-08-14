@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+
+$primary-color: #d1913c;
+$secondary-color: #ffd194;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pangolin", cursive;
+  font-size: 20px;
+  background: radial-gradient(circle, $primary-color, $secondary-color);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  border-radius: 10px;
+  width: 500px;
+
+  .form-group {
+    .input-wrapper {
+      position: relative;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+
+      &::placeholder {
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+
+    .open-eye {
+      position: absolute;
+      color: #000;
+      top: 5px;
+      right: 5px;
+      display: none;
+    }
+
+    .closed-eye {
+      position: absolute;
+      color: #000;
+      top: 5px;
+      right: 5px;
+    }
+
+    .closed-eye.show {
+      display: none;
+    }
+
+    .open-eye.show {
+      display: block;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: $primary-color;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Pangolin", cursive;
+    font-size: 25px;
+  }
+}
